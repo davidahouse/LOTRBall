@@ -13,7 +13,7 @@ class ScoreBoardViewModel: ObservableObject {
     @Published private(set) var lightScore: Int = 0
     @Published private(set) var darkScore: Int = 0
     @Published private(set) var inning: Int = 1
-    @Published private(set) var outs: Int = 0
+    @Published private(set) var outsViewModel = OutsViewModel(outs: 0)
 
     // MARK: - Private Properties
 
@@ -27,7 +27,7 @@ class ScoreBoardViewModel: ObservableObject {
                 self?.lightScore = game.lightScore
                 self?.darkScore = game.darkScore
                 self?.inning = game.inning
-                self?.outs = game.outs
+                self?.outsViewModel.set(outs: game.outs)
             }
             .store(in: &subscribers)
     }

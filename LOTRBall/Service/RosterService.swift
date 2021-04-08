@@ -10,18 +10,11 @@ import Foundation
 
 class RosterService {
 
-    var currentBatter: AnyPublisher<String, Never> {
-        batter.eraseToAnyPublisher()
-    }
-
-    var currentTeam: AnyPublisher<Team, Never> {
-        team.eraseToAnyPublisher()
-    }
+    private(set) var currentBatter = CurrentValueSubject<String, Never>(DarkTeamRoster.saruman.name)
+    private(set) var currentTeam = CurrentValueSubject<Team, Never>(.dark)
+    private(set) var notifications = PassthroughSubject<String, Never>()
 
     // MARK: - Private properties
-
-    private var batter = CurrentValueSubject<String, Never>(DarkTeamRoster.saruman.name)
-    private var team = CurrentValueSubject<Team, Never>(.dark)
 
     private var lightTeamBatter = LightTeamRoster.gandalf
     private var darkTeamBatter = DarkTeamRoster.saruman
@@ -29,24 +22,26 @@ class RosterService {
     // MARK: - Public methods
 
     func nextBatter() {
-        switch team.value {
+        switch currentTeam.value {
         case .light:
             let lightBatter = lightTeamBatter.next()
-            batter.value = lightBatter.name
+            currentBatter.value = lightBatter.name
             lightTeamBatter = lightBatter
+            notifications.send("Now batting.... \(lightBatter.name)")
         case .dark:
             let darkBatter = darkTeamBatter.next()
-            batter.value = darkBatter.name
+            currentBatter.value = darkBatter.name
             darkTeamBatter = darkBatter
+            notifications.send("Now batting.... \(darkBatter.name)")
         }
     }
 
     func switchTeam() {
-        switch team.value {
+        switch currentTeam.value {
         case .light:
-            team.value = .dark
+            currentTeam.value = .dark
         case .dark:
-            team.value = .light
+            currentTeam.value = .light
         }
         nextBatter()
     }
@@ -54,7 +49,7 @@ class RosterService {
     func reset() {
         lightTeamBatter = .gandalf
         darkTeamBatter = .saruman
-        batter.value = darkTeamBatter.name
-        team.value = .dark
+        currentBatter.value = darkTeamBatter.name
+        currentTeam.value = .dark
     }
 }

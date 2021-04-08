@@ -18,6 +18,7 @@ class GameLogicService {
     private var team: Team = .dark
     private var batting: String = ""
     private var subscribers = [AnyCancellable]()
+    private(set) var notifications = PassthroughSubject<String, Never>()
 
     init(teamPublisher: AnyPublisher<Team, Never>, battingPublisher: AnyPublisher<String, Never>) {
 
@@ -32,6 +33,7 @@ class GameLogicService {
     func update(game: Game, swingResult: SwingResult) -> AnyPublisher<GameUpdate, Never> {
 
         print("\(batting) \(swingResult.description)")
+        notifications.send("\(batting) \(swingResult.description)")
 
         guard swingResult != .out else {
             return Just(GameUpdate(game: Game(lightScore: game.lightScore, darkScore: game.darkScore, inning: game.inning, outs: game.outs + 1, onBase: game.onBase), newBatter: true))

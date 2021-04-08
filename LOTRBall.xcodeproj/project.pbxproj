@@ -16,6 +16,8 @@
 		DC407ED1261F280600852437 /* GameLogicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC407ED0261F280600852437 /* GameLogicService.swift */; };
 		DC407ED7261F347400852437 /* Publisher+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC407ED6261F347400852437 /* Publisher+Extension.swift */; };
 		DC407EDF261F384F00852437 /* GameLogicServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC407EDE261F384F00852437 /* GameLogicServiceTests.swift */; };
+		DC407EF6261F9BDB00852437 /* OutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC407EF5261F9BDB00852437 /* OutsView.swift */; };
+		DC407EFB261F9BF100852437 /* OutsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC407EFA261F9BF100852437 /* OutsViewModel.swift */; };
 		DC62275A261D28D700568C34 /* LOTRBallApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC622759261D28D700568C34 /* LOTRBallApp.swift */; };
 		DC62275C261D28D700568C34 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62275B261D28D700568C34 /* ContentView.swift */; };
 		DC62275E261D28D900568C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC62275D261D28D900568C34 /* Assets.xcassets */; };
@@ -65,6 +67,8 @@
 		DC407ED6261F347400852437 /* Publisher+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extension.swift"; sourceTree = "<group>"; };
 		DC407EDE261F384F00852437 /* GameLogicServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogicServiceTests.swift; sourceTree = "<group>"; };
 		DC407EE3261F41DA00852437 /* ARCHITECTURE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ARCHITECTURE.md; sourceTree = "<group>"; };
+		DC407EF5261F9BDB00852437 /* OutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutsView.swift; sourceTree = "<group>"; };
+		DC407EFA261F9BF100852437 /* OutsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutsViewModel.swift; sourceTree = "<group>"; };
 		DC622756261D28D700568C34 /* LOTRBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOTRBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC622759261D28D700568C34 /* LOTRBallApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOTRBallApp.swift; sourceTree = "<group>"; };
 		DC62275B261D28D700568C34 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -218,6 +222,8 @@
 			children = (
 				DC62279C261D29BA00568C34 /* ScoreBoardView.swift */,
 				DC6227A1261D2BF400568C34 /* ScoreBoardViewModel.swift */,
+				DC407EF5261F9BDB00852437 /* OutsView.swift */,
+				DC407EFA261F9BF100852437 /* OutsViewModel.swift */,
 			);
 			path = ScoreBoard;
 			sourceTree = "<group>";
@@ -408,6 +414,7 @@
 				DC6227CC261D3E0600568C34 /* Player.swift in Sources */,
 				DC622793261D297C00568C34 /* PlayingFieldView.swift in Sources */,
 				DC6227E6261DE15600568C34 /* Roster.swift in Sources */,
+				DC407EF6261F9BDB00852437 /* OutsView.swift in Sources */,
 				DC407ECC261F24A000852437 /* StartGame.swift in Sources */,
 				DC6227AF261D2D7000568C34 /* ActionBarViewModel.swift in Sources */,
 				DC6227A2261D2BF400568C34 /* ScoreBoardViewModel.swift in Sources */,
@@ -421,6 +428,7 @@
 				DC62275C261D28D700568C34 /* ContentView.swift in Sources */,
 				DC62275A261D28D700568C34 /* LOTRBallApp.swift in Sources */,
 				DC6227DE261DDF8E00568C34 /* SwingResult.swift in Sources */,
+				DC407EFB261F9BF100852437 /* OutsViewModel.swift in Sources */,
 				DC407EBB261F1FB500852437 /* RosterService.swift in Sources */,
 				DC407ED1261F280600852437 /* GameLogicService.swift in Sources */,
 				DC407EB6261F1F9C00852437 /* SwingResultService.swift in Sources */,

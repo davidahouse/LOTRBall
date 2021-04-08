@@ -17,12 +17,25 @@ struct NowBattingView: View {
         } else {
             VStack {
                 Text(viewModel.playerName)
+                    .font(.title)
+                    .bold()
                 Divider()
+                Spacer()
                 Text("Occupation:")
+                    .font(.caption)
                 Text(viewModel.playerOccupation)
+                    .font(.body)
+                    .bold()
                 Text("Race:")
+                    .font(.caption)
                 Text(viewModel.playerRace)
+                    .font(.body)
+                    .bold()
+                Spacer()
                 Divider()
+                ForEach(viewModel.messages, id: \.self) { msg in
+                    Text(msg)
+                }
             }
         }
     }

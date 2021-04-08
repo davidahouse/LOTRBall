@@ -16,6 +16,7 @@ class NowBattingViewModel: ObservableObject {
     @Published private(set) var playerName: String = ""
     @Published private(set) var playerRace: String = ""
     @Published private(set) var playerOccupation: String = ""
+    @Published private(set) var messages: [String] = []
 
     // MARK: - Private properties
 
@@ -23,7 +24,7 @@ class NowBattingViewModel: ObservableObject {
 
     // MARK: - Initializer
 
-    init(playerPublisher: AnyPublisher<Player, PlayerInfoError>) {
+    init(playerPublisher: AnyPublisher<Player, PlayerInfoError>, messagePublisher: AnyPublisher<String, Never>) {
         playerPublisher
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { [weak self] error in
@@ -34,6 +35,16 @@ class NowBattingViewModel: ObservableObject {
                 self?.playerRace = player.race
                 self?.errorFindingPlayer = false
             })
+            .store(in: &subscribers)
+
+        messagePublisher
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] message in
+                self?.messages.append(message)
+                if let count = self?.messages.count, count > 6 {
+                    self?.messages.removeFirst()
+                }
+            }
             .store(in: &subscribers)
     }
 }

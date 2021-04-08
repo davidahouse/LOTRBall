@@ -14,8 +14,7 @@ class ActionBarViewModel: ObservableObject {
     private var subscribers = [AnyCancellable]()
     private var events: PassthroughSubject<UIEvent, Never>
 
-    init(playerPublisher: AnyPublisher<String, Never>,
-         events: PassthroughSubject<UIEvent, Never>) {
+    init(events: PassthroughSubject<UIEvent, Never>) {
         self.events = events
     }
 

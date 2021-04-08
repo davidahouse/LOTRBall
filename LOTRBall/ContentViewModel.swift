@@ -25,31 +25,29 @@ class ContentViewModel: ObservableObject {
     private let playerInfoService = PlayerInfoFixtureService()
     private let swingResultService = SwingResultService()
     private var gameLogicService: GameLogicService!
-    private var team: Team = .dark
     private var gameLogicUpdate: AnyCancellable?
 
     init() {
         // Subscribe to any UI Events so we can update our game state
         subscribers.append(uiEventSubscribe(publisher: events.eraseToAnyPublisher()))
+        gameLogicService = GameLogicService(teamPublisher: rosterService.currentTeam.eraseToAnyPublisher(), battingPublisher: rosterService.currentBatter.eraseToAnyPublisher())
 
         startGameViewModel = StartGameViewModel(events: events)
 
         scoreBoardViewModel = ScoreBoardViewModel(gamePublisher: $game
                                                     .compactMap({ $0 })
                                                     .eraseToAnyPublisher())
-        actionBarViewModel = ActionBarViewModel(playerPublisher:
-                                                    rosterService.currentBatter
-                                                    .eraseToAnyPublisher(),
-                                                events: events)
-        nowBattingViewModel = NowBattingViewModel(playerPublisher: playerPublisher())
+        actionBarViewModel = ActionBarViewModel(events: events)
+        nowBattingViewModel = NowBattingViewModel(playerPublisher: playerPublisher(), messagePublisher: messagePublisher())
         playingFieldViewModel = PlayingFieldViewModel(gamePublisher: $game
                                                         .compactMap({ $0 })
                                                         .eraseToAnyPublisher())
-        gameLogicService = GameLogicService(teamPublisher: rosterService.currentTeam.eraseToAnyPublisher(), battingPublisher: rosterService.currentBatter.eraseToAnyPublisher())
+    }
 
-        rosterService.currentTeam
-            .weakAssign(to: \.team, on: self)
-            .store(in: &subscribers)
+    private func messagePublisher() -> AnyPublisher<String, Never> {
+        gameLogicService.notifications
+            .merge(with: rosterService.notifications)
+            .eraseToAnyPublisher()
     }
 
     private func playerPublisher() -> AnyPublisher<Player, PlayerInfoError> {
@@ -62,7 +60,7 @@ class ContentViewModel: ObservableObject {
 
         guard update.game.outs < 3 else {
             if update.game.inning < 9 {
-                game = Game(lightScore: update.game.lightScore, darkScore: update.game.darkScore, inning: team == .dark ? update.game.inning : update.game.inning + 1, outs: 0, onBase: [.none, .none, .none, .none])
+                game = Game(lightScore: update.game.lightScore, darkScore: update.game.darkScore, inning: rosterService.currentTeam.value == .dark ? update.game.inning : update.game.inning + 1, outs: 0, onBase: [.none, .none, .none, .none])
                 rosterService.switchTeam()
             } else {
                 // Game over!
@@ -92,6 +90,7 @@ extension ContentViewModel: UIEventSubscriber {
                 self?.handleGameUpdate(update)
             }
 
+        // Without the extension:
 //        swingResultService.swingResult(onCompletion: { result in
 //            self.gameLogicUpdate = gameLogicService.update(game: game, swingResult: result)
 //                .receive(on: DispatchQueue.main)

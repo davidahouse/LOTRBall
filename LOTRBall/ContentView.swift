@@ -25,7 +25,7 @@ struct ContentView: View {
                             .environmentObject(viewModel.playingFieldViewModel)
                         NowBattingView()
                             .environmentObject(viewModel.nowBattingViewModel)
-                            .frame(width: 150)
+                            .frame(width: 250)
                     }
                     Spacer()
                     ActionBarView()
