@@ -1,0 +1,752 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC407EA3261E810200852437 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC407EA2261E810200852437 /* Game.swift */; };
+		DC407EB1261E85EA00852437 /* UIEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC407EB0261E85EA00852437 /* UIEvent.swift */; };
+		DC407EB6261F1F9C00852437 /* SwingResultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC407EB5261F1F9C00852437 /* SwingResultService.swift */; };
+		DC407EBB261F1FB500852437 /* RosterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC407EBA261F1FB500852437 /* RosterService.swift */; };
+		DC407EC4261F249900852437 /* StartGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC407EC3261F249900852437 /* StartGameViewModel.swift */; };
+		DC407ECC261F24A000852437 /* StartGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC407ECB261F24A000852437 /* StartGame.swift */; };
+		DC407ED1261F280600852437 /* GameLogicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC407ED0261F280600852437 /* GameLogicService.swift */; };
+		DC407ED7261F347400852437 /* Publisher+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC407ED6261F347400852437 /* Publisher+Extension.swift */; };
+		DC407EDF261F384F00852437 /* GameLogicServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC407EDE261F384F00852437 /* GameLogicServiceTests.swift */; };
+		DC62275A261D28D700568C34 /* LOTRBallApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC622759261D28D700568C34 /* LOTRBallApp.swift */; };
+		DC62275C261D28D700568C34 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62275B261D28D700568C34 /* ContentView.swift */; };
+		DC62275E261D28D900568C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC62275D261D28D900568C34 /* Assets.xcassets */; };
+		DC622761261D28D900568C34 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC622760261D28D900568C34 /* Preview Assets.xcassets */; };
+		DC62276D261D28D900568C34 /* LOTRBallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62276C261D28D900568C34 /* LOTRBallTests.swift */; };
+		DC622778261D28DA00568C34 /* LOTRBallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC622777261D28DA00568C34 /* LOTRBallUITests.swift */; };
+		DC62278E261D297300568C34 /* NowBattingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62278D261D297300568C34 /* NowBattingView.swift */; };
+		DC622793261D297C00568C34 /* PlayingFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC622792261D297C00568C34 /* PlayingFieldView.swift */; };
+		DC622798261D298500568C34 /* ActionBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC622797261D298500568C34 /* ActionBarView.swift */; };
+		DC62279D261D29BA00568C34 /* ScoreBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62279C261D29BA00568C34 /* ScoreBoardView.swift */; };
+		DC6227A2261D2BF400568C34 /* ScoreBoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6227A1261D2BF400568C34 /* ScoreBoardViewModel.swift */; };
+		DC6227A7261D2C9A00568C34 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6227A6261D2C9A00568C34 /* ContentViewModel.swift */; };
+		DC6227AF261D2D7000568C34 /* ActionBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6227AE261D2D7000568C34 /* ActionBarViewModel.swift */; };
+		DC6227B4261D2D8900568C34 /* PlayingFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6227B3261D2D8900568C34 /* PlayingFieldViewModel.swift */; };
+		DC6227B9261D2DA000568C34 /* NowBattingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6227B8261D2DA000568C34 /* NowBattingViewModel.swift */; };
+		DC6227C2261D364F00568C34 /* PlayerInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6227C1261D364F00568C34 /* PlayerInfoService.swift */; };
+		DC6227CC261D3E0600568C34 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6227CB261D3E0600568C34 /* Player.swift */; };
+		DC6227DE261DDF8E00568C34 /* SwingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6227DD261DDF8E00568C34 /* SwingResult.swift */; };
+		DC6227E6261DE15600568C34 /* Roster.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6227E5261DE15600568C34 /* Roster.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC622769261D28D900568C34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC62274E261D28D700568C34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC622755261D28D700568C34;
+			remoteInfo = LOTRBall;
+		};
+		DC622774261D28D900568C34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC62274E261D28D700568C34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC622755261D28D700568C34;
+			remoteInfo = LOTRBall;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DC407EA2261E810200852437 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		DC407EB0261E85EA00852437 /* UIEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEvent.swift; sourceTree = "<group>"; };
+		DC407EB5261F1F9C00852437 /* SwingResultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwingResultService.swift; sourceTree = "<group>"; };
+		DC407EBA261F1FB500852437 /* RosterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterService.swift; sourceTree = "<group>"; };
+		DC407EC3261F249900852437 /* StartGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewModel.swift; sourceTree = "<group>"; };
+		DC407ECB261F24A000852437 /* StartGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGame.swift; sourceTree = "<group>"; };
+		DC407ED0261F280600852437 /* GameLogicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogicService.swift; sourceTree = "<group>"; };
+		DC407ED6261F347400852437 /* Publisher+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extension.swift"; sourceTree = "<group>"; };
+		DC407EDE261F384F00852437 /* GameLogicServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogicServiceTests.swift; sourceTree = "<group>"; };
+		DC407EE3261F41DA00852437 /* ARCHITECTURE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ARCHITECTURE.md; sourceTree = "<group>"; };
+		DC622756261D28D700568C34 /* LOTRBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOTRBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC622759261D28D700568C34 /* LOTRBallApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOTRBallApp.swift; sourceTree = "<group>"; };
+		DC62275B261D28D700568C34 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DC62275D261D28D900568C34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC622760261D28D900568C34 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DC622762261D28D900568C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC622763261D28D900568C34 /* LOTRBall.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LOTRBall.entitlements; sourceTree = "<group>"; };
+		DC622768261D28D900568C34 /* LOTRBallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LOTRBallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC62276C261D28D900568C34 /* LOTRBallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOTRBallTests.swift; sourceTree = "<group>"; };
+		DC62276E261D28D900568C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC622773261D28D900568C34 /* LOTRBallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LOTRBallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC622777261D28DA00568C34 /* LOTRBallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOTRBallUITests.swift; sourceTree = "<group>"; };
+		DC622779261D28DA00568C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC62278D261D297300568C34 /* NowBattingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowBattingView.swift; sourceTree = "<group>"; };
+		DC622792261D297C00568C34 /* PlayingFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingFieldView.swift; sourceTree = "<group>"; };
+		DC622797261D298500568C34 /* ActionBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBarView.swift; sourceTree = "<group>"; };
+		DC62279C261D29BA00568C34 /* ScoreBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardView.swift; sourceTree = "<group>"; };
+		DC6227A1261D2BF400568C34 /* ScoreBoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardViewModel.swift; sourceTree = "<group>"; };
+		DC6227A6261D2C9A00568C34 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		DC6227AE261D2D7000568C34 /* ActionBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBarViewModel.swift; sourceTree = "<group>"; };
+		DC6227B3261D2D8900568C34 /* PlayingFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingFieldViewModel.swift; sourceTree = "<group>"; };
+		DC6227B8261D2DA000568C34 /* NowBattingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowBattingViewModel.swift; sourceTree = "<group>"; };
+		DC6227C1261D364F00568C34 /* PlayerInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInfoService.swift; sourceTree = "<group>"; };
+		DC6227CB261D3E0600568C34 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		DC6227DD261DDF8E00568C34 /* SwingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwingResult.swift; sourceTree = "<group>"; };
+		DC6227E5261DE15600568C34 /* Roster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roster.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC622753261D28D700568C34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC622765261D28D900568C34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC622770261D28D900568C34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC407EC2261F247F00852437 /* StartGame */ = {
+			isa = PBXGroup;
+			children = (
+				DC407EC3261F249900852437 /* StartGameViewModel.swift */,
+				DC407ECB261F24A000852437 /* StartGame.swift */,
+			);
+			path = StartGame;
+			sourceTree = "<group>";
+		};
+		DC407ED5261F346700852437 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DC407ED6261F347400852437 /* Publisher+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DC62274D261D28D700568C34 = {
+			isa = PBXGroup;
+			children = (
+				DC622758261D28D700568C34 /* LOTRBall */,
+				DC62276B261D28D900568C34 /* LOTRBallTests */,
+				DC622776261D28DA00568C34 /* LOTRBallUITests */,
+				DC622757261D28D700568C34 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC622757261D28D700568C34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC622756261D28D700568C34 /* LOTRBall.app */,
+				DC622768261D28D900568C34 /* LOTRBallTests.xctest */,
+				DC622773261D28D900568C34 /* LOTRBallUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC622758261D28D700568C34 /* LOTRBall */ = {
+			isa = PBXGroup;
+			children = (
+				DC6227DC261DDF8000568C34 /* Model */,
+				DC6227BD261D331300568C34 /* Service */,
+				DC622788261D28ED00568C34 /* Features */,
+				DC407ED5261F346700852437 /* Extensions */,
+				DC622759261D28D700568C34 /* LOTRBallApp.swift */,
+				DC62275B261D28D700568C34 /* ContentView.swift */,
+				DC6227A6261D2C9A00568C34 /* ContentViewModel.swift */,
+				DC62275D261D28D900568C34 /* Assets.xcassets */,
+				DC622762261D28D900568C34 /* Info.plist */,
+				DC622763261D28D900568C34 /* LOTRBall.entitlements */,
+				DC62275F261D28D900568C34 /* Preview Content */,
+				DC407EE3261F41DA00852437 /* ARCHITECTURE.md */,
+			);
+			path = LOTRBall;
+			sourceTree = "<group>";
+		};
+		DC62275F261D28D900568C34 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DC622760261D28D900568C34 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DC62276B261D28D900568C34 /* LOTRBallTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC62276C261D28D900568C34 /* LOTRBallTests.swift */,
+				DC62276E261D28D900568C34 /* Info.plist */,
+				DC407EDE261F384F00852437 /* GameLogicServiceTests.swift */,
+			);
+			path = LOTRBallTests;
+			sourceTree = "<group>";
+		};
+		DC622776261D28DA00568C34 /* LOTRBallUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DC622777261D28DA00568C34 /* LOTRBallUITests.swift */,
+				DC622779261D28DA00568C34 /* Info.plist */,
+			);
+			path = LOTRBallUITests;
+			sourceTree = "<group>";
+		};
+		DC622788261D28ED00568C34 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				DC407EC2261F247F00852437 /* StartGame */,
+				DC62278C261D291400568C34 /* NowBatting */,
+				DC62278B261D290700568C34 /* PlayingField */,
+				DC62278A261D28FC00568C34 /* ActionBar */,
+				DC622789261D28F300568C34 /* ScoreBoard */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		DC622789261D28F300568C34 /* ScoreBoard */ = {
+			isa = PBXGroup;
+			children = (
+				DC62279C261D29BA00568C34 /* ScoreBoardView.swift */,
+				DC6227A1261D2BF400568C34 /* ScoreBoardViewModel.swift */,
+			);
+			path = ScoreBoard;
+			sourceTree = "<group>";
+		};
+		DC62278A261D28FC00568C34 /* ActionBar */ = {
+			isa = PBXGroup;
+			children = (
+				DC622797261D298500568C34 /* ActionBarView.swift */,
+				DC6227AE261D2D7000568C34 /* ActionBarViewModel.swift */,
+			);
+			path = ActionBar;
+			sourceTree = "<group>";
+		};
+		DC62278B261D290700568C34 /* PlayingField */ = {
+			isa = PBXGroup;
+			children = (
+				DC622792261D297C00568C34 /* PlayingFieldView.swift */,
+				DC6227B3261D2D8900568C34 /* PlayingFieldViewModel.swift */,
+			);
+			path = PlayingField;
+			sourceTree = "<group>";
+		};
+		DC62278C261D291400568C34 /* NowBatting */ = {
+			isa = PBXGroup;
+			children = (
+				DC62278D261D297300568C34 /* NowBattingView.swift */,
+				DC6227B8261D2DA000568C34 /* NowBattingViewModel.swift */,
+			);
+			path = NowBatting;
+			sourceTree = "<group>";
+		};
+		DC6227BD261D331300568C34 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DC6227C1261D364F00568C34 /* PlayerInfoService.swift */,
+				DC407EB5261F1F9C00852437 /* SwingResultService.swift */,
+				DC407EBA261F1FB500852437 /* RosterService.swift */,
+				DC407ED0261F280600852437 /* GameLogicService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DC6227DC261DDF8000568C34 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC407EA2261E810200852437 /* Game.swift */,
+				DC6227CB261D3E0600568C34 /* Player.swift */,
+				DC6227DD261DDF8E00568C34 /* SwingResult.swift */,
+				DC6227E5261DE15600568C34 /* Roster.swift */,
+				DC407EB0261E85EA00852437 /* UIEvent.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC622755261D28D700568C34 /* LOTRBall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC62277C261D28DA00568C34 /* Build configuration list for PBXNativeTarget "LOTRBall" */;
+			buildPhases = (
+				DC622752261D28D700568C34 /* Sources */,
+				DC622753261D28D700568C34 /* Frameworks */,
+				DC622754261D28D700568C34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LOTRBall;
+			productName = LOTRBall;
+			productReference = DC622756261D28D700568C34 /* LOTRBall.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC622767261D28D900568C34 /* LOTRBallTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC62277F261D28DA00568C34 /* Build configuration list for PBXNativeTarget "LOTRBallTests" */;
+			buildPhases = (
+				DC622764261D28D900568C34 /* Sources */,
+				DC622765261D28D900568C34 /* Frameworks */,
+				DC622766261D28D900568C34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC62276A261D28D900568C34 /* PBXTargetDependency */,
+			);
+			name = LOTRBallTests;
+			productName = LOTRBallTests;
+			productReference = DC622768261D28D900568C34 /* LOTRBallTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DC622772261D28D900568C34 /* LOTRBallUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC622782261D28DA00568C34 /* Build configuration list for PBXNativeTarget "LOTRBallUITests" */;
+			buildPhases = (
+				DC62276F261D28D900568C34 /* Sources */,
+				DC622770261D28D900568C34 /* Frameworks */,
+				DC622771261D28D900568C34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC622775261D28D900568C34 /* PBXTargetDependency */,
+			);
+			name = LOTRBallUITests;
+			productName = LOTRBallUITests;
+			productReference = DC622773261D28D900568C34 /* LOTRBallUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC62274E261D28D700568C34 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					DC622755261D28D700568C34 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					DC622767261D28D900568C34 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = DC622755261D28D700568C34;
+					};
+					DC622772261D28D900568C34 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = DC622755261D28D700568C34;
+					};
+				};
+			};
+			buildConfigurationList = DC622751261D28D700568C34 /* Build configuration list for PBXProject "LOTRBall" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC62274D261D28D700568C34;
+			productRefGroup = DC622757261D28D700568C34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC622755261D28D700568C34 /* LOTRBall */,
+				DC622767261D28D900568C34 /* LOTRBallTests */,
+				DC622772261D28D900568C34 /* LOTRBallUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC622754261D28D700568C34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC622761261D28D900568C34 /* Preview Assets.xcassets in Resources */,
+				DC62275E261D28D900568C34 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC622766261D28D900568C34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC622771261D28D900568C34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC622752261D28D700568C34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC6227A7261D2C9A00568C34 /* ContentViewModel.swift in Sources */,
+				DC622798261D298500568C34 /* ActionBarView.swift in Sources */,
+				DC6227B4261D2D8900568C34 /* PlayingFieldViewModel.swift in Sources */,
+				DC407EC4261F249900852437 /* StartGameViewModel.swift in Sources */,
+				DC6227CC261D3E0600568C34 /* Player.swift in Sources */,
+				DC622793261D297C00568C34 /* PlayingFieldView.swift in Sources */,
+				DC6227E6261DE15600568C34 /* Roster.swift in Sources */,
+				DC407ECC261F24A000852437 /* StartGame.swift in Sources */,
+				DC6227AF261D2D7000568C34 /* ActionBarViewModel.swift in Sources */,
+				DC6227A2261D2BF400568C34 /* ScoreBoardViewModel.swift in Sources */,
+				DC62279D261D29BA00568C34 /* ScoreBoardView.swift in Sources */,
+				DC62278E261D297300568C34 /* NowBattingView.swift in Sources */,
+				DC6227C2261D364F00568C34 /* PlayerInfoService.swift in Sources */,
+				DC407EB1261E85EA00852437 /* UIEvent.swift in Sources */,
+				DC6227B9261D2DA000568C34 /* NowBattingViewModel.swift in Sources */,
+				DC407EA3261E810200852437 /* Game.swift in Sources */,
+				DC407ED7261F347400852437 /* Publisher+Extension.swift in Sources */,
+				DC62275C261D28D700568C34 /* ContentView.swift in Sources */,
+				DC62275A261D28D700568C34 /* LOTRBallApp.swift in Sources */,
+				DC6227DE261DDF8E00568C34 /* SwingResult.swift in Sources */,
+				DC407EBB261F1FB500852437 /* RosterService.swift in Sources */,
+				DC407ED1261F280600852437 /* GameLogicService.swift in Sources */,
+				DC407EB6261F1F9C00852437 /* SwingResultService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC622764261D28D900568C34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC407EDF261F384F00852437 /* GameLogicServiceTests.swift in Sources */,
+				DC62276D261D28D900568C34 /* LOTRBallTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC62276F261D28D900568C34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC622778261D28DA00568C34 /* LOTRBallUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC62276A261D28D900568C34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC622755261D28D700568C34 /* LOTRBall */;
+			targetProxy = DC622769261D28D900568C34 /* PBXContainerItemProxy */;
+		};
+		DC622775261D28D900568C34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC622755261D28D700568C34 /* LOTRBall */;
+			targetProxy = DC622774261D28D900568C34 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DC62277A261D28DA00568C34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DC62277B261D28DA00568C34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		DC62277D261D28DA00568C34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LOTRBall/LOTRBall.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"LOTRBall/Preview Content\"";
+				DEVELOPMENT_TEAM = 75VB98RCZH;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = LOTRBall/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidahouse.LOTRBall;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		DC62277E261D28DA00568C34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LOTRBall/LOTRBall.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"LOTRBall/Preview Content\"";
+				DEVELOPMENT_TEAM = 75VB98RCZH;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = LOTRBall/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidahouse.LOTRBall;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		DC622780261D28DA00568C34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 75VB98RCZH;
+				INFOPLIST_FILE = LOTRBallTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidahouse.LOTRBallTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LOTRBall.app/Contents/MacOS/LOTRBall";
+			};
+			name = Debug;
+		};
+		DC622781261D28DA00568C34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 75VB98RCZH;
+				INFOPLIST_FILE = LOTRBallTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidahouse.LOTRBallTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LOTRBall.app/Contents/MacOS/LOTRBall";
+			};
+			name = Release;
+		};
+		DC622783261D28DA00568C34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 75VB98RCZH;
+				INFOPLIST_FILE = LOTRBallUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidahouse.LOTRBallUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = LOTRBall;
+			};
+			name = Debug;
+		};
+		DC622784261D28DA00568C34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 75VB98RCZH;
+				INFOPLIST_FILE = LOTRBallUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidahouse.LOTRBallUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = LOTRBall;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC622751261D28D700568C34 /* Build configuration list for PBXProject "LOTRBall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC62277A261D28DA00568C34 /* Debug */,
+				DC62277B261D28DA00568C34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC62277C261D28DA00568C34 /* Build configuration list for PBXNativeTarget "LOTRBall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC62277D261D28DA00568C34 /* Debug */,
+				DC62277E261D28DA00568C34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC62277F261D28DA00568C34 /* Build configuration list for PBXNativeTarget "LOTRBallTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC622780261D28DA00568C34 /* Debug */,
+				DC622781261D28DA00568C34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC622782261D28DA00568C34 /* Build configuration list for PBXNativeTarget "LOTRBallUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC622783261D28DA00568C34 /* Debug */,
+				DC622784261D28DA00568C34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC62274E261D28D700568C34 /* Project object */;
+}
