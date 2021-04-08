@@ -10,8 +10,8 @@ import Foundation
 import SwiftUI
 
 class ScoreBoardViewModel: ObservableObject {
-    @Published private(set) var lightScore: Int = 0
-    @Published private(set) var darkScore: Int = 0
+    @Published private(set) var goodScore: Int = 0
+    @Published private(set) var badScore: Int = 0
     @Published private(set) var inning: Int = 1
     @Published private(set) var outsViewModel = OutsViewModel(outs: 0)
 
@@ -24,8 +24,8 @@ class ScoreBoardViewModel: ObservableObject {
         gamePublisher
             .receive(on: DispatchQueue.main)
             .sink { [weak self] game in
-                self?.lightScore = game.lightScore
-                self?.darkScore = game.darkScore
+                self?.goodScore = game.goodScore
+                self?.badScore = game.badScore
                 self?.inning = game.inning
                 self?.outsViewModel.set(outs: game.outs)
             }

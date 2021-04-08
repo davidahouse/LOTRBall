@@ -15,7 +15,7 @@ struct GameUpdate {
 
 class GameLogicService {
 
-    private var team: Team = .dark
+    private var team: Team = .bad
     private var batting: String = ""
     private var subscribers = [AnyCancellable]()
     private(set) var notifications = PassthroughSubject<String, Never>()
@@ -36,7 +36,7 @@ class GameLogicService {
         notifications.send("\(batting) \(swingResult.description)")
 
         guard swingResult != .out else {
-            return Just(GameUpdate(game: Game(lightScore: game.lightScore, darkScore: game.darkScore, inning: game.inning, outs: game.outs + 1, onBase: game.onBase), newBatter: true))
+            return Just(GameUpdate(game: Game(goodScore: game.goodScore, badScore: game.badScore, inning: game.inning, outs: game.outs + 1, onBase: game.onBase), newBatter: true))
                 .eraseToAnyPublisher()
         }
 
@@ -57,10 +57,10 @@ class GameLogicService {
 
         let updatedGame: Game = {
             switch team {
-            case .light:
-                return Game(lightScore: game.lightScore + scores, darkScore: game.darkScore, inning: game.inning, outs: game.outs, onBase: bases)
-            case .dark:
-                return Game(lightScore: game.lightScore, darkScore: game.darkScore + scores, inning: game.inning, outs: game.outs, onBase: bases)
+            case .good:
+                return Game(goodScore: game.goodScore + scores, badScore: game.badScore, inning: game.inning, outs: game.outs, onBase: bases)
+            case .bad:
+                return Game(goodScore: game.goodScore, badScore: game.badScore + scores, inning: game.inning, outs: game.outs, onBase: bases)
             }
         }()
 

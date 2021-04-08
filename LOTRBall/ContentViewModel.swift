@@ -60,7 +60,7 @@ class ContentViewModel: ObservableObject {
 
         guard update.game.outs < 3 else {
             if update.game.inning < 9 {
-                game = Game(lightScore: update.game.lightScore, darkScore: update.game.darkScore, inning: rosterService.currentTeam.value == .dark ? update.game.inning : update.game.inning + 1, outs: 0, onBase: [.none, .none, .none, .none])
+                game = Game(goodScore: update.game.goodScore, badScore: update.game.badScore, inning: rosterService.currentTeam.value == .bad ? update.game.inning : update.game.inning + 1, outs: 0, onBase: [.none, .none, .none, .none])
                 rosterService.switchTeam()
             } else {
                 // Game over!

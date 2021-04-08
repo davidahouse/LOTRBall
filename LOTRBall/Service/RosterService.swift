@@ -10,46 +10,46 @@ import Foundation
 
 class RosterService {
 
-    private(set) var currentBatter = CurrentValueSubject<String, Never>(DarkTeamRoster.saruman.name)
-    private(set) var currentTeam = CurrentValueSubject<Team, Never>(.dark)
+    private(set) var currentBatter = CurrentValueSubject<String, Never>(BadTeamRoster.saruman.name)
+    private(set) var currentTeam = CurrentValueSubject<Team, Never>(.bad)
     private(set) var notifications = PassthroughSubject<String, Never>()
 
     // MARK: - Private properties
 
-    private var lightTeamBatter = LightTeamRoster.gandalf
-    private var darkTeamBatter = DarkTeamRoster.saruman
+    private var goodTeamBatter = GoodTeamRoster.gandalf
+    private var badTeamBatter = BadTeamRoster.saruman
 
     // MARK: - Public methods
 
     func nextBatter() {
         switch currentTeam.value {
-        case .light:
-            let lightBatter = lightTeamBatter.next()
-            currentBatter.value = lightBatter.name
-            lightTeamBatter = lightBatter
-            notifications.send("Now batting.... \(lightBatter.name)")
-        case .dark:
-            let darkBatter = darkTeamBatter.next()
-            currentBatter.value = darkBatter.name
-            darkTeamBatter = darkBatter
-            notifications.send("Now batting.... \(darkBatter.name)")
+        case .good:
+            let batter = goodTeamBatter.next()
+            currentBatter.value = batter.name
+            goodTeamBatter = batter
+            notifications.send("Now batting.... \(batter.name)")
+        case .bad:
+            let batter = badTeamBatter.next()
+            currentBatter.value = batter.name
+            badTeamBatter = batter
+            notifications.send("Now batting.... \(batter.name)")
         }
     }
 
     func switchTeam() {
         switch currentTeam.value {
-        case .light:
-            currentTeam.value = .dark
-        case .dark:
-            currentTeam.value = .light
+        case .good:
+            currentTeam.value = .bad
+        case .bad:
+            currentTeam.value = .good
         }
         nextBatter()
     }
 
     func reset() {
-        lightTeamBatter = .gandalf
-        darkTeamBatter = .saruman
-        currentBatter.value = darkTeamBatter.name
-        currentTeam.value = .dark
+        goodTeamBatter = .gandalf
+        badTeamBatter = .saruman
+        currentBatter.value = badTeamBatter.name
+        currentTeam.value = .bad
     }
 }

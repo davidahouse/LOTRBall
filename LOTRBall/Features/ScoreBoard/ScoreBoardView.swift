@@ -13,14 +13,14 @@ struct ScoreBoardView: View {
 
     var body: some View {
         HStack {
-            Text("LIGHT")
+            Text("GOOD")
                 .font(.headline)
-            Text("\(viewModel.lightScore)")
+            Text("\(viewModel.goodScore)")
                 .font(.title)
                 .bold()
-            Text("DARK")
+            Text("BAD")
                 .font(.headline)
-            Text("\(viewModel.darkScore)")
+            Text("\(viewModel.badScore)")
                 .font(.title)
                 .bold()
             Text("INNING")

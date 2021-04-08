@@ -8,11 +8,11 @@
 import Foundation
 
 enum Team {
-    case light
-    case dark
+    case good
+    case bad
 }
 
-enum LightTeamRoster: String, CaseIterable {
+enum GoodTeamRoster: String, CaseIterable {
     case gandalf = "Gandalf"
     case aragorn = "Aragorn"
     case frodo = "Frodo"
@@ -27,16 +27,16 @@ enum LightTeamRoster: String, CaseIterable {
         return rawValue
     }
 
-    func next() -> LightTeamRoster {
-        guard self != .merry, let index = LightTeamRoster.allCases.firstIndex(of: self) else {
+    func next() -> GoodTeamRoster {
+        guard self != .merry, let index = GoodTeamRoster.allCases.firstIndex(of: self) else {
             return .gandalf
         }
 
-        return LightTeamRoster.allCases[index+1]
+        return GoodTeamRoster.allCases[index+1]
     }
 }
 
-enum DarkTeamRoster: String, CaseIterable {
+enum BadTeamRoster: String, CaseIterable {
     case saruman = "Saruman"
     case sauron = "Sauron"
     case gothmog = "Gothmog"
@@ -51,11 +51,11 @@ enum DarkTeamRoster: String, CaseIterable {
         return rawValue
     }
 
-    func next() -> DarkTeamRoster {
-        guard self != .balrog, let index = DarkTeamRoster.allCases.firstIndex(of: self) else {
+    func next() -> BadTeamRoster {
+        guard self != .balrog, let index = BadTeamRoster.allCases.firstIndex(of: self) else {
             return .saruman
         }
 
-        return DarkTeamRoster.allCases[index+1]
+        return BadTeamRoster.allCases[index+1]
     }
 }
